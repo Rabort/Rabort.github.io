@@ -1,6 +1,4 @@
-
-
-   window.addEventListener("DOMContentLoaded",() => {
+  window.addEventListener("DOMContentLoaded",() => {
 	const upload = new UploadModal("#upload");
 });
 class UploadModal {
