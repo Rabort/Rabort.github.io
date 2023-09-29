@@ -1,11 +1,15 @@
+
 <html>
 	<head>
-		<title>Весёлая кнопка</title>
+		<title>НИХЕРА НЕ ВЕСЁЛАЯ КНОПКА</title>
 		<link rel="stylesheet" href="CSS/font.css">
 	</head>
-	<body>
-		<input type="file" id="textFile">
-		<br><br><button onclick="uploadFile()">Подтвердить загрузку</button>
+	<body>                         <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input-->
+			<label class="input-file">
+		         <input type="file" id="textFile">
+				 <span class="input-file-btn">Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
+		    </label>
+		<br><br><button class="Green" onclick="uploadFile()">Подтвердить загрузку</button> 
 		<script src="JS/textFile.js"></script>
 		<p><i><FileNameCSS><strong id="fileName"></strong><FileNameCSS></i>
 		<strong id="result"></strong>
