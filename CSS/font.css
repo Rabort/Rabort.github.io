@@ -1,0 +1,12 @@
+FileNameCSS {
+    font-size: 9pt;
+	color: #87CEFA;
+}
+.textBorder {
+	display: inline-block;
+    border: 2px solid #808080;
+    padding: 10px;
+	background: #f0f0f0;
+	border-radius: 6px;
+	white-space: pre-wrap;
+}
