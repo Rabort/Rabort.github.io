@@ -23,7 +23,18 @@ function uploadFile() {
 		document.getElementById("textInBorder").classList.add("textBorder");
 		document.getElementById("textInBorder").innerHTML = fileContents;
   }
-	} else {
+	} else if (/.+.xlsx/.test(file.name)) {
+		console.info(file.name + ' является EXCEL-файлом.')
+		// Позже удалить:
+		document.getElementById("result").style.color = "gold";
+		document.getElementById("fileName").innerHTML = file.name;
+		document.getElementById("result").innerHTML = ' ⚠️ Мы ещё работаем над EXCEL-файлами';
+		document.getElementById("textInBorder").classList.remove("textBorder");
+		document.getElementById("textInBorder").innerHTML = '';
+		// Позже удалить /\
+	}
+	else {
+		console.info(file.name + ' не является текстовым файлом.')
 		document.getElementById("result").style.color = "red";
 		document.getElementById("fileName").innerHTML = file.name;
 		document.getElementById("result").innerHTML = 'не является текстовым файлом!';

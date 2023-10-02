@@ -1,14 +1,20 @@
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>НИХЕРА НЕ ВЕСЁЛАЯ КНОПКА</title>
 		<link rel="stylesheet" href="CSS/font.css">
 	</head>
 	<body>                         <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input-->
-			<label class="input-file">
-		         <input type="file" id="textFile">
-				 <span class="input-file-btn">Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
-		    </label>
+		<label class="input-file">
+			<input type="file" id="textFile">
+			<span class="input-file-btn">Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
+		</label>
+		
+		<!--Отображение имени загружаемого файла | lolmak-->
+			<i><PreFileInfoCSS><strong id="PreFileInfo"></strong><PreFileInfoCSS></i>
+			<i><PreFileNameCSS><strong id="preFileName"></strong><PreFileNameCSS></i>
+			<script src="JS/preFile.js"></script>
+		<!--Отображение имени загружаемого файла | lolmak-->
 		<br><br><button class="Green" onclick="uploadFile()">Подтвердить загрузку</button> 
 		<script src="JS/textFile.js"></script>
 		<p><i><FileNameCSS><strong id="fileName"></strong><FileNameCSS></i>
