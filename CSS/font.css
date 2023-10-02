@@ -1,18 +1,21 @@
-FileNameCSS {
-    font-size: 9pt;
-	color: #87CEFA;
-}
-PreFileNameCSS {
-	position: relative;
-	top: 10px;
-	right: 185px;
-	font-size: 9pt;
-	color: #87CEFA;
-}
+
 PreFileInfoCSS {
 	position: relative;
 	top: -7px;
 	right: -5px;
+}
+.PreFileNameCSS {
+	position: absolute;
+	top: 65px;
+    left: 230px;
+	font-size: 9pt;
+	color: #87CEFA;
+}.FileNameCSS {
+    font-size: 12pt;
+	color: #87CEFA;
+}
+.Info{
+	font-size: 14pt;
 }
 .textBorder {
 	display: inline-block;
@@ -21,14 +24,14 @@ PreFileInfoCSS {
 	background: #f0f0f0;
 	border-radius: 6px;
 	white-space: pre-wrap;
-/*Кастомка загружаемого файла. Цвет, ширина, длин, задний фон, цвет текста*/
+/*Кастомка загружаемого файла. Цвет, ширина, длин, задний фон, цвет текста | Cat Customer*/
 }
 .input-file {
 	position: relative;
 	display: inline-block;
 }
 .input-file-btn {
-	background-color: #098109;
+	background-color: #016401;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border: none;
@@ -53,16 +56,17 @@ PreFileInfoCSS {
 	height: 0;
 }
 .input-file-btn:hover {
-	background-color: #0f490f;
+	background-color: #078f07;
 	color: white;
 }
-/*Кастомка кнопки "Подтвердить загрузку". Переливающийся цвет при наведении мышки на кнопку, цвет, задний фон, текст*/
+/*Кастомка кнопки "Подтвердить загрузку". Переливающийся цвет при наведении мышки на кнопку, цвет, задний фон, текст | Cat Customer*/
 .Green {
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 	border: none;
+	background-color: #016401;
 	vertical-align: middle;
-	color: rgb(45, 148, 62);
+	color: rgb(255, 255, 255);
 	padding: 10px 20px;
 	text-align: center;
 	box-sizing: border-box;
@@ -73,12 +77,12 @@ PreFileInfoCSS {
 	margin: 0;
 	height: 40px;
   }
-  /*При наведении мышкой на конпку переходит в этот цвет*/
+  /*При наведении мышкой на конпку переходит в этот цвет | Cat Customer*/
   .Green:hover {
-	background-color: #304b30;
+	background-color: #078f07;
 	color: white;
   }
-  /*Кастомка для кнопки Гришиной*/
+  /*Кастомка для кнопки Гришиной | Cat Customer*/
   .Pink {
 	background-color: #960070;
 	-webkit-transition-duration: 0.4s;
@@ -96,12 +100,12 @@ PreFileInfoCSS {
 	margin: 0;
 	height: 40px;
   }
-  /*Меняет цвет при наведении курсором на кнопку(для Гришиной)*/
+  /*Меняет цвет при наведении курсором на кнопку(для Гришиной) | Cat Customer*/
   .Pink:hover {
 	background-color: rgb(202, 12, 177);
 	color: rgb(233, 233, 233);
   }
-  /*Кастомка загружаемового файла пнг,жепег как и в первом*/
+  /*Кастомка загружаемового файла пнг,жепег как и в первом | Cat Customer*/
 .input-file-kotik {
 	position: relative;
 	
@@ -124,7 +128,7 @@ PreFileInfoCSS {
 	margin: 0;
 	height: 40px;
 }
-/*Меняет цвет на друго при наведении курсором на кнопку*/
+/*Меняет цвет на друго при наведении курсором на кнопку | Cat Customer*/
 .input-file-btn-kotik:hover {
 	background-color: #b30648;
 	color: rgb(241, 241, 241);
@@ -137,7 +141,7 @@ PreFileInfoCSS {
 	width: 0;
 	height: 0;
 }
-/*кастомка рамки где находяться кнопки*/
+/*кастомка рамки где находяться кнопки | Cat Customer*/
 .ramka{
 	border:2px solid #555; 
 	box-shadow:3px 3px 5px #999; 
@@ -146,13 +150,27 @@ PreFileInfoCSS {
 	margin:20px; 
 	padding:20px;
 }
-/*Кастомка выводимой таблицы*/
-td, th {
-	text-align: center;
-	border: 2px solid;
+/*Кастомка выводимой таблицы | Cat Customer*/
+td  {
+	padding: 5px 10px;
+	border: 1px solid #eee;
+	text-align: left;
   }
-  table {
-	border-collapse: collapse;
-	border: 2px solid;
-	width: 30%;
+th {
+	font-weight: bold;
+	padding: 5px;
+	background: #cccccc;
+	border: 1px solid #dddddd;
   }
+table {
+	border: 1px solid #eee;
+	table-layout: fixed;
+	width: 100%;
+	margin-bottom: 20px;
+  }
+  tbody tr:nth-child(odd){
+	background: #fff;
+  }
+  tbody tr:nth-child(even){
+	background: #bbbbbb;
+}
