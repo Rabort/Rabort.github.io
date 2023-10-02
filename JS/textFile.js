@@ -10,6 +10,8 @@ function uploadFile() {
 	const tblHead = document.getElementById("excelTableHead");
 	const tblBody = document.getElementById("excelTableBody");
 	
+	var fastCheck = 0;
+	
 	if (!file) {
 		console.warn('Остановка работы кнопки: Файл не выбран.');
 		return;
@@ -53,10 +55,24 @@ function uploadFile() {
 					cellHead.appendChild(cellTextHead);
 					rowHead.appendChild(cellHead);
 				} else {
-					nullPos.push(i);
+					fastCheck = 0;
+					for (let j = 1; j < data.length; j++) {
+						if (data[j][i] != null) {
+							fastCheck = 1;
+						}
+					}
+					if (fastCheck == 0) {
+							nullPos.push(i);
+					} else {
+						const cellHead = document.createElement("th");
+						const cellTextHead = document.createTextNode('null');
+						cellHead.appendChild(cellTextHead);
+						rowHead.appendChild(cellHead);
+					}
 				}
 			}
 			tblHead.appendChild(rowHead);
+			console.log(data[0].length);
 			for (let i = 1; i < data.length; i++) {
 				const rowBody = document.createElement("tr");
 				for (let j = 0; j < data[0].length; j++) {
