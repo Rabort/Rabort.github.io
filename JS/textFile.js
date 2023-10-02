@@ -51,7 +51,7 @@ function uploadFile() {
 			for (let i = 0; i < data[0].length; i++) {
 				if (data[0][i] != null) {
 					const cellHead = document.createElement("th");
-					const cellTextHead = document.createTextNode(data[0][i]);
+					const cellTextHead = document.createTextNode(data[0][i] === null ? "-" : data[0][i]);
 					cellHead.appendChild(cellTextHead);
 					rowHead.appendChild(cellHead);
 				} else {
@@ -65,7 +65,7 @@ function uploadFile() {
 							nullPos.push(i);
 					} else {
 						const cellHead = document.createElement("th");
-						const cellTextHead = document.createTextNode('null');
+						const cellTextHead = document.createTextNode('-');
 						cellHead.appendChild(cellTextHead);
 						rowHead.appendChild(cellHead);
 					}
@@ -78,7 +78,7 @@ function uploadFile() {
 				for (let j = 0; j < data[0].length; j++) {
 					if (!nullPos.includes(j)) {
 						const cellBody = document.createElement("td");
-						const cellTextBody = document.createTextNode(data[i][j]);
+						const cellTextBody = document.createTextNode(data[i][j] === null ? "-" : data[i][j]);
 						cellBody.appendChild(cellTextBody);
 						rowBody.appendChild(cellBody);
 					}
