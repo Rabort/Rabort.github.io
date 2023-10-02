@@ -13,12 +13,22 @@
 		<!--Отображение имени загружаемого файла | lolmak-->
 			<i><PreFileInfoCSS><strong id="PreFileInfo"></strong><PreFileInfoCSS></i>
 			<i><PreFileNameCSS><strong id="preFileName"></strong><PreFileNameCSS></i>
+			<script src="node_modules/excelReader.js"></script>
 			<script src="JS/preFile.js"></script>
 		<!--Отображение имени загружаемого файла | lolmak-->
+		
 		<br><br><button class="Green" onclick="uploadFile()">Подтвердить загрузку</button> 
-		<script src="JS/textFile.js"></script>
 		<p><i><FileNameCSS><strong id="fileName"></strong><FileNameCSS></i>
 		<strong id="result"></strong>
 		<br><br><i id="textInBorder"></i>
+		
+		<!--Таблица | lolmak-->
+		<table id="excelTable">
+			<thead id="excelTableHead"></thead>
+			<tbody id="excelTableBody"></tbody>
+		</table>
+		<script src="JS/textFile.js"></script>
+		<!--Таблица | lolmak-->
+		
 	</body>
 </html>
