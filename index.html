@@ -3,8 +3,10 @@
 	<head>
 		<title>НИХЕРА НЕ ВЕСЁЛАЯ КНОПКА</title>
 		<link rel="stylesheet" href="CSS/font.css">
+		<meta http-equiv="Permissions-Policy" content="interest-cohort=()"> <!---Фикс политики Google-->
 	</head>
 	<body>                         <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input-->
+		<p class="ramka"> <!--Добавление большой рамки для кнопок-->
 		<label class="input-file">
 			<input type="file" id="textFile">
 			<span class="input-file-btn">Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
@@ -21,7 +23,8 @@
 		<p><i><FileNameCSS><strong id="fileName"></strong><FileNameCSS></i>
 		<strong id="result"></strong>
 		<br><br><i id="textInBorder"></i>
-		
+		</p> <!--Конец рамки-->
+
 		<!--Таблица | lolmak-->
 		<table id="excelTable">
 			<thead id="excelTableHead"></thead>
@@ -29,6 +32,13 @@
 		</table>
 		<script src="JS/textFile.js"></script>
 		<!--Таблица | lolmak-->
-		
+
+		<!--Кнопка Для Гришиной!!! (для загрузки котеков)-->
+		<br><br><label class="input-file-kotik">
+			<input type="file" accept="image/png, image/gif, image/jpeg"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег-->
+			<span class="input-file-btn-kotik">Выберите котека</span>
+		</label>
+		<br><br><button class="Pink" onclick="uploadFile()">Подтвердить загрузку котека</button>
+
 	</body>
 </html>

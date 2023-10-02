@@ -14,15 +14,6 @@ PreFileInfoCSS {
 	top: -7px;
 	right: -5px;
 }
-td, th {
-  text-align: center;
-  border: 2px solid;
-}
-table {
-  border-collapse: collapse;
-  border: 2px solid;
-  width: 30%;
-}
 .textBorder {
 	display: inline-block;
     border: 2px solid #808080;
@@ -30,31 +21,29 @@ table {
 	background: #f0f0f0;
 	border-radius: 6px;
 	white-space: pre-wrap;
+/*Кастомка загружаемого файла. Цвет, ширина, длин, задний фон, цвет текста*/
 }
 .input-file {
 	position: relative;
 	display: inline-block;
 }
 .input-file-btn {
-	position: relative;
-	display: inline-block;
-	cursor: pointer;
-	outline: none;
-	text-decoration: none;
-	font-size: 14px;
-	vertical-align: middle;
-	color: rgb(255 255 255);
-	text-align: center;
-	border-radius: 4px;
-	background-color: #419152;
-	line-height: 22px;
-	height: 40px;
-	padding: 10px 20px;
-	box-sizing: border-box;
+	background-color: #098109;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
 	border: none;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 14px;
 	margin: 0;
-	transition: background-color 0.2s;
-}
+	height: 40px;
+	}
 .input-file input[type=file] {
 	position: absolute;
 	z-index: -1;
@@ -63,6 +52,11 @@ table {
 	width: 0;
 	height: 0;
 }
+.input-file-btn:hover {
+	background-color: #0f490f;
+	color: white;
+}
+/*Кастомка кнопки "Подтвердить загрузку". Переливающийся цвет при наведении мышки на кнопку, цвет, задний фон, текст*/
 .Green {
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -79,8 +73,86 @@ table {
 	margin: 0;
 	height: 40px;
   }
-  
+  /*При наведении мышкой на конпку переходит в этот цвет*/
   .Green:hover {
 	background-color: #304b30;
 	color: white;
+  }
+  /*Кастомка для кнопки Гришиной*/
+  .Pink {
+	background-color: #960070;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 14px;
+	margin: 0;
+	height: 40px;
+  }
+  /*Меняет цвет при наведении курсором на кнопку(для Гришиной)*/
+  .Pink:hover {
+	background-color: rgb(202, 12, 177);
+	color: rgb(233, 233, 233);
+  }
+  /*Кастомка загружаемового файла пнг,жепег как и в первом*/
+.input-file-kotik {
+	position: relative;
+	
+	display: inline-block;
+}
+.input-file-btn-kotik {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	background-color: #520422;
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 14px;
+	margin: 0;
+	height: 40px;
+}
+/*Меняет цвет на друго при наведении курсором на кнопку*/
+.input-file-btn-kotik:hover {
+	background-color: #b30648;
+	color: rgb(241, 241, 241);
+}
+.input-file-kotik input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+/*кастомка рамки где находяться кнопки*/
+.ramka{
+	border:2px solid #555; 
+	box-shadow:3px 3px 5px #999; 
+	width: 400px; 
+	text-align:center;  
+	margin:20px; 
+	padding:20px;
+}
+/*Кастомка выводимой таблицы*/
+td, th {
+	text-align: center;
+	border: 2px solid;
+  }
+  table {
+	border-collapse: collapse;
+	border: 2px solid;
+	width: 30%;
   }
