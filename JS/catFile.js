@@ -1,14 +1,16 @@
 /************************************************
 		Котики какие-то...
 		By lolmak
+		Не какие-то, а очень даже красивые
+		By Cat Customer
 ************************************************/
 
 function catUpload() {
 	swal({
 		title: "lolmak&Cat Customer",
 		text: "Эта кнопка просто имба!!! " +
-		"мы ее просто оставили, так, побаловаться",
-		icon: "info",
+		"Мы ее просто оставили, так, побаловаться",
+		icon: "https://media.tenor.com/SI5tOTnHS34AAAAi/verycat-twitch-cat-twitch-emote.gif?height=10px",
 		button: "Ну... Имба",
 	});
 }

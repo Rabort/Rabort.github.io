@@ -34,3 +34,6 @@
 	background-color: rgb(255, 255, 255);
 	border: 3px solid white;
   }
+  .swal-icon {
+    height: 100px;
+  }
