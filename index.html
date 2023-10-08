@@ -3,6 +3,9 @@
 	<head>
 		<title>НИХЕРА НЕ ВЕСЁЛАЯ КНОПКА</title>
 		<link rel="stylesheet" href="CSS/font.css">
+		<!--Тут будут храниться нужные мне модули | lolmak-->
+			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<!--Тут будут храниться нужные мне модули | lolmak-->
 	</head>
 	<body>                         <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->
 		<p class="ramka"> <!--Добавление большой рамки для кнопок | Cat Customer-->
@@ -35,10 +38,11 @@
 		<!--Кнопка Для Гришиной!!! (для загрузки котеков) | Cat Customer-->
 		 <p class="ramka">
 		<label class="input-file-kotik">
-			<input type="file" accept="image/png, image/gif, image/jpeg"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег | Cat Customer-->
+			<input type="file" accept="image/png, image/gif, image/jpeg" id="catFile"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег | Cat Customer-->
 			<span class="input-file-btn-kotik">Выберите котека (пока не работаит)</span>
 		</label>
-		<br><br><button class="Pink" onclick="uploadFile()">Подтвердить загрузку котека</button>
+		<script src="JS/catFile.js"></script>
+		<br><br><button class="Pink" onclick="catUpload()">Подтвердить загрузку котека</button>
          </p>
 	</body>
 </html>

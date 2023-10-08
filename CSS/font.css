@@ -174,3 +174,6 @@ table {
   tbody tr:nth-child(even){
 	background: #bbbbbb;
 }
+.swal-text {
+	text-align: center;
+}
