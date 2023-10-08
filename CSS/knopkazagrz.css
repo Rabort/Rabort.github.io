@@ -1,0 +1,57 @@
+/*Кастомка загружаемого файла. Цвет, ширина, длин, задний фон, цвет текста | Cat Customer*/
+.input-file {
+	position: relative;
+	display: inline-block;
+}
+.input-file-btn {
+	background-color: #016401;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 14px;
+	margin: 0;
+	height: 40px;
+	}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	width: 0;
+	height: 0;
+}
+.input-file-btn:hover {
+	background-color: #078f07;
+	color: white;
+}
+/*Кастомка кнопки "Подтвердить загрузку". Переливающийся цвет при наведении мышки на кнопку, цвет, задний фон, текст | Cat Customer*/
+.Green {
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	background-color: #016401;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 4px;
+	font-size: 14px;
+	margin: 0;
+	height: 40px;
+  }
+  /*При наведении мышкой на конпку переходит в этот цвет | Cat Customer*/
+  .Green:hover {
+	background-color: #078f07;
+	color: white;
+  }

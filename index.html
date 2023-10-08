@@ -3,11 +3,14 @@
 	<head>
 		<title>НИХЕРА НЕ ВЕСЁЛАЯ КНОПКА</title>
 		<link rel="stylesheet" href="CSS/font.css">
+		<link rel="stylesheet" href="CSS/swalka.css">
+		<link rel="stylesheet" href="CSS/knopkakoti.css">
+		<link rel="stylesheet" href="CSS/knopkazagrz.css">
 		<!--Тут будут храниться нужные мне модули | lolmak-->
 			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<!--Тут будут храниться нужные мне модули | lolmak-->
 	</head>
-	<body>                         <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->
+	<body class="klass"> <!--Добавить задний фон надо!-->                        <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->
 		<p class="ramka"> <!--Добавление большой рамки для кнопок | Cat Customer-->
 		<label class="input-file">
 			<input type="file" id="textFile">
@@ -25,7 +28,7 @@
 		<p><i><strong class="FileNameCSS" id="fileName"></strong></i>
 		<strong class="Info" id="result"></strong>
 		<br><br><i id="textInBorder"></i>
-		</p> <!--Конец рамки-->
+		</p> <!--Конец рамки | Cat Customer-->
 
 		<!--Таблица | lolmak-->
 		<table id="excelTable">
@@ -37,12 +40,14 @@
 
 		<!--Кнопка Для Гришиной!!! (для загрузки котеков) | Cat Customer-->
 		 <p class="ramka">
-		<label class="input-file-kotik">
+		<label class="input-file-kotik",>
 			<input type="file" accept="image/png, image/gif, image/jpeg" id="catFile"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег | Cat Customer-->
 			<span class="input-file-btn-kotik">Выберите котека (пока не работаит)</span>
 		</label>
 		<script src="JS/catFile.js"></script>
 		<br><br><button class="Pink" onclick="catUpload()">Подтвердить загрузку котека</button>
          </p>
+		 <br><br><img src="https://celes.club/uploads/posts/2022-11/1667389806_40-celes-club-p-krasivie-oboi-na-telefon-s-kotikami-pinter-40.jpg" height="300">
+		 <!--Кнопка для генерации расписания (в процессе разработки) | Cat Customer-->
 	</body>
 </html>

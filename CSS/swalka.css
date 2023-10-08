@@ -1,0 +1,36 @@
+/*Кастомка текста уведов | Cat Customer*/
+.swal-text {
+    background-color: #fff09a;
+    font-size: 20px;
+    font-family: serif;
+    padding: 17px;
+    border: 1px solid #e2c649;
+    display: block;
+    margin: 22px;
+    text-align: center;
+    color: #61534e;
+}
+/*Кастомка кнопка уведы | Cat Customer*/
+.swal-button { 
+    -webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	padding: 7px 19px;
+	border-radius: 2px;
+	background-color: #000d49;
+	font-size: 12px;
+  }
+  .swal-button:hover {
+	color: rgba(22, 22, 22, 0.774);
+  }
+  /*Кастомка нижней части уведов | Cat Customer*/
+  .swal-footer {
+	background-color: rgb(245, 248, 250);
+	margin-top: 32px;
+	border-top: 1px solid #E9EEF1;
+	overflow: hidden;
+  }
+  /*Кастомка окна уведомления | Cat Customer*/
+  .swal-modal {
+	background-color: rgb(255, 255, 255);
+	border: 3px solid white;
+  }
