@@ -5,11 +5,11 @@
 
 function catUpload() {
 	swal({
-		title: "lolmak",
-		text: "Короче, кнопка теперь работает! " +
-		"но я в душе не бум бум что она должна делать...",
+		title: "lolmak&Cat Customer",
+		text: "Эта кнопка просто имба!!! " +
+		"мы ее просто оставили, так, побаловаться",
 		icon: "info",
-		button: "пофиг!",
+		button: "Ну... Имба",
 	});
 }
 
@@ -38,4 +38,4 @@ input.addEventListener('change', () => {
 			}
 		}
 	}
-})
+});
