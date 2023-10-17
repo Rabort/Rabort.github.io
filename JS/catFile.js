@@ -31,7 +31,7 @@ function catUploadHTTP() {
 	var data = new FormData();
 	data.append('image', fileHTTP, fileHTTP.name);
 	let headers = '';
-	switch ((fileHTTP.name).split('.')[1]) {
+	switch (((fileHTTP.name).split('.')[1]).toLowerCase()) {
 		case 'jpg':
 			headers = 'image/jpeg';
 			break
