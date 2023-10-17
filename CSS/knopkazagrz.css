@@ -15,7 +15,7 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	display: inline-block;
-	border-radius: 4px;
+	border-radius: 12px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
@@ -31,6 +31,7 @@
 .input-file-btn:hover {
 	background-color: #078f07;
 	color: white;
+	border-radius: 20px;
 }
 /*Кастомка кнопки "Подтвердить загрузку". Переливающийся цвет при наведении мышки на кнопку, цвет, задний фон, текст | Cat Customer*/
 .Green {
@@ -45,7 +46,7 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	display: inline-block;
-	border-radius: 4px;
+	border-radius: 12px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
@@ -54,4 +55,5 @@
   .Green:hover {
 	background-color: #078f07;
 	color: white;
+	border-radius: 20px;
   }
