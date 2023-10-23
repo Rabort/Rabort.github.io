@@ -3,15 +3,63 @@
 		By lolmak
 ************************************************/
 
+const daysData = {
+	day: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
+	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+	21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+	31],
+	monthFirstPart: ['Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+}
+
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
 function uploadFile() {
+	const currentDate = new Date();
+	const currentYear = currentDate.getFullYear();
+	const weekends = [];
+	
+	const tblHead = document.getElementById("excelTableHead");
+	const tblBody = document.getElementById("excelTableBody");
+	
+	const tableData = [];
+	
+	for (let month = 0; month < daysData.monthFirstPart.length; month++) {
+		tableData.push([]);
+		for (let i = 0; i < daysData.day.length; i++) {
+			tableData[0].push(daysData.monthFirstPart[month])
+		}
+	}
+	console.log(tableData);
+
+	for (let month = 0; month < 12; month++) {
+		for (let day = 1; day <= 31; day++) {
+			const date = new Date(currentYear, month, day);
+			if (date.getFullYear() === currentYear && (date.getDay() === 0 || date.getDay() === 6)) {
+				weekends.push(date.getMonth() + '.' + date.getDate());
+			}
+		}
+	}
+	
+	while (document.querySelector("tr")) {
+		try {
+			tblHead.removeChild(document.querySelector("tr"));
+		} catch (e) {}
+		try {
+			tblBody.removeChild(document.querySelector("tr"));
+		} catch (e) {}
+	}
+	
+	document.getElementById("result").innerHTML = 'Макс химичит с созданием учебного графика, пока что вся инфа отображается в консоле: Ctrl + shift + I => console';
+	document.getElementById("textInBorder").classList.remove("textBorder");
+	document.getElementById("textInBorder").innerHTML = '';
+
+	/********************************************************************************
 	const textFile = document.getElementById('textFile');
 	const file = textFile.files[0];
 	
 	const tblHead = document.getElementById("excelTableHead");
 	const tblBody = document.getElementById("excelTableBody");
-	
-	var fastCheck = 0;
-	
 	if (!file) {
 		console.warn('Остановка работы кнопки: Файл не выбран.');
 		return;
@@ -109,4 +157,5 @@ function uploadFile() {
 		document.getElementById("textInBorder").classList.remove("textBorder");
 		document.getElementById("textInBorder").innerHTML = '';
 	}
+	**********************************************************************************************************/
 }

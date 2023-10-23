@@ -86,6 +86,8 @@ PreFileInfoCSS {
 	padding:20px;
 }
 /*Кастомка выводимой таблицы | Cat Customer*/
+
+/****************************
 td  {
 	padding: 5px 10px;
 	border: 1px solid #eee;
@@ -109,3 +111,4 @@ table {
   tbody tr:nth-child(even){
 	background: #bbbbbb;
 }
+****************************************/
