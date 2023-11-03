@@ -3,43 +3,31 @@
 		By lolmak
 ************************************************/
 
-const daysData = {
-	day: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-	21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-	31],
-	monthFirstPart: ['Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
+const dateData = {
+	monthFirstPart: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+					'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь']
 }
 
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 
-function uploadFile() {
-	const currentDate = new Date();
-	const currentYear = currentDate.getFullYear();
-	const weekends = [];
-	
-	const tblHead = document.getElementById("excelTableHead");
-	const tblBody = document.getElementById("excelTableBody");
-	
-	const tableData = [];
-	
-	for (let month = 0; month < daysData.monthFirstPart.length; month++) {
-		tableData.push([]);
-		for (let i = 0; i < daysData.day.length; i++) {
-			tableData[0].push(daysData.monthFirstPart[month])
-		}
-	}
-	console.log(tableData);
+const tblHead = document.getElementById("excelTableHead");
+const tblBody = document.getElementById("excelTableBody");
+const tableData = [[], [], ['ИС 22-01'], ['ИС 22-02'], ['ИС 21-01'], ['ИС 21-02']];
 
-	for (let month = 0; month < 12; month++) {
+function uploadFile() {
+	
+	for (let month = 8; month < 12; month++) {
 		for (let day = 1; day <= 31; day++) {
 			const date = new Date(currentYear, month, day);
-			if (date.getFullYear() === currentYear && (date.getDay() === 0 || date.getDay() === 6)) {
-				weekends.push(date.getMonth() + '.' + date.getDate());
+			if (date.getFullYear() === currentYear && date.getMonth() === month &&
+			date.getDay() != 0 && date.getDay() != 6) {
+				tableData[0].push(dateData.monthFirstPart[month])
+				tableData[1].push(day.toString().padStart(2, '0') + '.' + month.toString().padStart(2, '0'));
 			}
 		}
 	}
+	console.log(tableData);	
 	
 	while (document.querySelector("tr")) {
 		try {
@@ -53,6 +41,27 @@ function uploadFile() {
 	document.getElementById("result").innerHTML = 'Макс химичит с созданием учебного графика, пока что вся инфа отображается в консоле: Ctrl + shift + I => console';
 	document.getElementById("textInBorder").classList.remove("textBorder");
 	document.getElementById("textInBorder").innerHTML = '';
+	
+	const rowHead = document.createElement("tr");
+	for (let i = 0; i < tableData[0].length; i++) {
+		const cellHead = document.createElement("th");
+		const cellTextHead = document.createTextNode(tableData[0][i] === undefined ? "-" : tableData[0][i]);
+		cellHead.appendChild(cellTextHead);
+		rowHead.appendChild(cellHead);
+	}
+	tblHead.appendChild(rowHead);
+	
+	for (let i = 1; i < tableData.length; i++) {
+		const rowBody = document.createElement("tr");
+		for (let j = 0; j < tableData[0].length; j++) {
+			const cellBody = document.createElement("td");
+			const cellTextBody = document.createTextNode(tableData[i][j] === undefined ? "-" : tableData[i][j]);
+			cellBody.appendChild(cellTextBody);
+			rowBody.appendChild(cellBody);
+		}
+		tblBody.appendChild(rowBody);
+	}
+	
 
 	/********************************************************************************
 	const textFile = document.getElementById('textFile');
