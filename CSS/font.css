@@ -5,10 +5,9 @@ PreFileInfoCSS {
 	right: -5px;
 }
 .PreFileNameCSS {
-	position: absolute;
-	top: 70px;
-    left: 230px;
-	font-size: 9pt;
+	position: relative;
+	bottom: 6px;
+	font-size: 10pt;
 	color: #87CEFA;
 }.FileNameCSS {
     font-size: 12pt;
@@ -53,6 +52,7 @@ PreFileInfoCSS {
 	display: block;
 	width: 0;
 	height: 0;
+	
 }
 .input-file-btn:hover {
 	background-color: #078f07;
@@ -65,25 +65,6 @@ PreFileInfoCSS {
 	display: block;
 	width: 0;
 	height: 0;
-}
-/*кастомка рамки где находяться кнопки | Cat Customer*/
-.ramka{
-	display: inline-block;
-	border:2px solid #555; 
-	box-shadow:3px 3px 5px #999; 
-	width: 400px; 
-	text-align:center;  
-	margin:20px; 
-	padding:20px;
-}
-.ramka1{
-	display: inline-block;
-	border:2px solid #555; 
-	box-shadow:3px 3px 5px #999; 
-	width: 400px; 
-	text-align:center;  
-	margin:20px; 
-	padding:20px;
 }
 /*Кастомка выводимой таблицы | Cat Customer*/
 

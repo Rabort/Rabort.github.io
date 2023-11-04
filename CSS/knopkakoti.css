@@ -1,5 +1,68 @@
+  /*Кастомка загружаемового файла пнг,жепег как и в первом | Cat Customer*/
+.input-file-kotik {	
+	position: relative;
+}
+
+.input-file-btn-kotik {
+	position: relative;
+	left: 65px;
+    display: inline-block;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	background-color: #520422;
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	border-radius: 12px;
+	font-size: 14px;
+	margin: 0;
+	height: 40px;
+}
+
+/*Меняет цвет на друго при наведении курсором на кнопку | Cat Customer*/
+.input-file-btn-kotik:hover {
+	background-color: #b30648;
+	color: rgb(241, 241, 241);
+	border-radius: 18px;
+}
+
+.button1
+{
+	position: relative;
+    left: 35px;
+	background-color: rgb(199, 98, 98);
+	display: inline-block;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	vertical-align: middle;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	text-decoration: none;
+	border-radius: 12px;
+	font-size: 14px;
+	margin: 0;
+	height: 40px;
+	
+}
+
+.button1:hover
+{
+background-color: rgb(192, 47, 47);
+color:  rgb(255, 255, 255);
+border-radius: 18px;
+}
+
 /*Кастомка для кнопки Гришиной | Cat Customer*/
 .Pink {
+	position: relative;
+	left: 3%;
     display: inline-block;
 	background-color: #960070;
 	-webkit-transition-duration: 0.4s;
@@ -17,64 +80,10 @@
 	margin: 0;
 	height: 40px;
   }
+  
   /*Меняет цвет при наведении курсором на кнопку(для Гришиной) | Cat Customer*/
   .Pink:hover {
 	background-color: rgb(202, 12, 177);
 	color: rgb(233, 233, 233);
 	border-radius: 18px;
   }
-  /*Кастомка загружаемового файла пнг,жепег как и в первом | Cat Customer*/
-.input-file-kotik {
-	position: relative;
-	
-	display: inline-block;
-}
-.input-file-btn-kotik {
-    display: inline-block;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	border: none;
-	vertical-align: middle;
-	color: rgb(255, 255, 255);
-	background-color: #520422;
-	padding: 10px 20px;
-	text-align: center;
-	box-sizing: border-box;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 12px;
-	font-size: 14px;
-	margin: 0;
-	height: 40px;
-}
-/*Меняет цвет на друго при наведении курсором на кнопку | Cat Customer*/
-.input-file-btn-kotik:hover {
-	background-color: #b30648;
-	color: rgb(241, 241, 241);
-	border-radius: 18px;
-}
-.button1
-{
-	background-color: rgb(199, 98, 98);
-	display: inline-block;
-	-webkit-transition-duration: 0.4s;
-	transition-duration: 0.4s;
-	border: none;
-	vertical-align: middle;
-	color: rgb(255, 255, 255);
-	padding: 10px 20px;
-	text-align: center;
-	box-sizing: border-box;
-	text-decoration: none;
-	display: inline-block;
-	border-radius: 12px;
-	font-size: 14px;
-	margin: 0;
-	height: 40px;
-}
-.button1:hover
-{
-background-color: rgb(192, 47, 47);
-color:  rgb(255, 255, 255);
-border-radius: 18px;
-}

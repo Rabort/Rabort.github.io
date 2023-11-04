@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<header>
+		 <div img>
+		  <img src="https://alpha-krsk.ru/assets/templates/img/portfolio/kolledz/logo.png" width="400">
+		 </div>
+		</header>
 		<title>НИХЕРА НЕ ВЕСЁЛАЯ КНОПКА</title>
+		<link rel="stylesheet" href="CSS/menu.css">
 		<link rel="stylesheet" href="CSS/font.css">
 		<link rel="stylesheet" href="CSS/swalka.css">
 		<link rel="stylesheet" href="CSS/knopkakoti.css">
@@ -11,45 +17,55 @@
 			<script src="https://unpkg.com/axios@1.5.1/dist/axios.min.js"></script>
 		<!--Тут будут храниться нужные мне модули | lolmak-->
 	</head>
-	<body class="background"> <!--Добавить задний фон надо!-->                        <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->
-		<p class="ramka"> <!--Добавление большой рамки для кнопок | Cat Customer-->
-		<label class="input-file">
-			<input type="file" id="textFile">
-			<span class="input-file-btn">Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
-		</label>
+	<body>               <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->
 		
-		<!--Отображение имени загружаемого файла | lolmak-->		
-			<i><PreFileInfoCSS><strong id="PreFileInfo"></strong><PreFileInfoCSS></i>
+		<div class="sidenav">
+		<label class="input-file">
+		  <input type="file" id="textFile">
+		  <br><br><br><span class="input-file-btn" >Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
+		</label>
+		 <br><br><button class="Green" onclick="uploadFile()">Подтвердить загрузку</button> 
+		 <p><i><strong class="FileNameCSS" id="fileName"></strong></i>
+		 <strong class="Info" id="result"></strong>
+		 <i id="textInBorder"></i>
+
+		 <!--Отображение имени загружаемого файла | lolmak-->	
+		 <i><PreFileInfoCSS><strong id="PreFileInfo"></strong><PreFileInfoCSS></i>
 			<i><strong class="PreFileNameCSS" id="preFileName"></strong></i>
 			<script src="https://unpkg.com/read-excel-file@5.x/bundle/read-excel-file.min.js"></script>
 			<script src="JS/preFile.js"></script>	
-		<!--Отображение имени загружаемого файла | lolmak-->
-	
-		<br><br><button class="Green" onclick="uploadFile()">Подтвердить загрузку</button> 
-		<p><i><strong class="FileNameCSS" id="fileName"></strong></i>
-		<strong class="Info" id="result"></strong>
-		<br><br><i id="textInBorder"></i>
-		</p> <!--Конец рамки | Cat Customer-->
+			<!--Отображение имени загружаемого файла | lolmak-->
 
-		<!--Таблица | lolmak-->
-		<table id="excelTable">
-			<thead id="excelTableHead"></thead>
-			<tbody id="excelTableBody"></tbody>
-		</table>
-		<script src="JS/textFile.js"></script>
-		<!--Таблица | lolmak-->
+			<!--Тут в скором времени будут "файлы" с расписанием в отдельной рамке
+			<div class="RaspFileExel"> Тут будут отображаться файлы расписания </div>
+			или
+			<p class="RaspFileExel"> Или тут будут отображаться </p>
+			Я пока не решил где его поставить и что использовать.
+			Тут в скором времени будут "файлы" с расписанием в отдельной рамке-->
+
 
 		<!--Кнопка Для Гришиной!!! (для загрузки котеков) | Cat Customer-->
-		 <p class="ramka1">
 		<label class="input-file-kotik",>
-			<input type="file" accept="image/png, image/gif, image/jpeg" id="catFile"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег | Cat Customer-->
-			<span class="input-file-btn-kotik">Выберите котека</span>
-			<button class="button1" onclick="catUploadHTTP()">Отправь котека на сервер</button><!--Сюда свой скрипте ставь. Позже я все кастомизирую.-->
+		  <input type="file" accept="image/png, image/gif, image/jpeg" id="catFile"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег | Cat Customer-->
+		  <br><br><br><br><span class="input-file-btn-kotik">Выберите котека</span>
+		  <br><br><button class="button1" onclick="catUploadHTTP()">Отправь котека на сервер</button><!--Сюда свой скрипте ставь. Позже я все кастомизирую.-->
 		</label>
-		<script src="JS/catFile.js"></script>
-		<br><br><button class="Pink" onclick="catUpload()">Это классная кнопка(нажми на меня)</button>
-         </p>
-		 <br><br><img id="imgCat">
-		 <!--Кнопка для генерации расписания (в процессе разработки) | Cat Customer-->
-	</body>
+		 <script src="JS/catFile.js"></script>
+		 <br><br><button class="Pink" onclick="catUpload()">Это классная кнопка(нажми на меня)</button>
+         <br><br><img id="imgCat">
+		</div>
+
+	<!--Таблица | lolmak-->
+	<div class="main">
+	<table id="excelTable">
+	  <thead id="excelTableHead"></thead>
+	  <tbody id="excelTableBody"></tbody>
+	</table>
+	 <script src="JS/textFile.js"></script>
+	</div>
+	<!--Таблица | lolmak-->
+
+       
+		
+</body>	
 </html>
