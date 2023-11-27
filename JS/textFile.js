@@ -13,7 +13,18 @@ const currentYear = currentDate.getFullYear();
 
 const tblHead = document.getElementById("excelTableHead");
 const tblBody = document.getElementById("excelTableBody");
-const tableData = [[], [], ['ИС 22-01'], ['ИС 22-02'], ['ИС 21-01'], ['ИС 21-02']];
+const tableData = [['⠀⠀⠀⠀⠀⠀⠀⠀'], ['⠀⠀⠀⠀⠀⠀⠀⠀'], ['ИС 22-01'], ['ИС 22-02'], ['ИС 21-01'], ['ИС 21-02']];
+
+/************************************************
+		Временная настройка часов
+		В будущем они будут загружать через файл
+		[<Учебная>, <Производственная>]
+************************************************/
+
+const IS2201 = [34, 0];
+const IS2202 = [60, 72];
+const IS2101 = [60, 72];
+const IS2102 = [62, 90];
 
 function uploadFile() {
 	
@@ -27,7 +38,17 @@ function uploadFile() {
 			}
 		}
 	}
-	console.log(tableData);	
+	console.log(tableData);
+	
+	for (let i = 0; i < 2; i++) {
+		IS2201[i] = Math.ceil(IS2201[i] / 6);
+		IS2202[i] = Math.ceil(IS2202[i] / 6);
+		IS2101[i] = Math.ceil(IS2101[i] / 6);
+		IS2102[i] = Math.ceil(IS2102[i] / 6);
+	}
+	console.log (IS2201, IS2202, IS2101, IS2102);
+	
+	
 	
 	while (document.querySelector("tr")) {
 		try {
