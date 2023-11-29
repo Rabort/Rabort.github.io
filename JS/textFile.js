@@ -13,20 +13,27 @@ const currentYear = currentDate.getFullYear();
 
 const tblHead = document.getElementById("excelTableHead");
 const tblBody = document.getElementById("excelTableBody");
-const tableData = [['⠀⠀⠀⠀⠀⠀⠀⠀'], ['⠀⠀⠀⠀⠀⠀⠀⠀'], ['ИС 22-01'], ['ИС 22-02'], ['ИС 21-01'], ['ИС 21-02']];
 
-/************************************************
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max) + 1;
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
+function uploadFile() {
+	
+	const tableData = [['⠀⠀⠀⠀⠀⠀⠀⠀'], ['⠀⠀⠀⠀⠀⠀⠀⠀'], ['ИС 22-01'], ['ИС 22-02'], ['ИС 21-01'], ['ИС 21-02']];
+	
+	/************************************************
 		Временная настройка часов
 		В будущем они будут загружать через файл
 		[<Учебная>, <Производственная>]
-************************************************/
+	************************************************/
 
-const IS2201 = [34, 0];
-const IS2202 = [60, 72];
-const IS2101 = [60, 72];
-const IS2102 = [62, 90];
-
-function uploadFile() {
+	const IS2201 = [34, 0];
+	const IS2202 = [60, 72];
+	const IS2101 = [60, 72];
+	const IS2102 = [62, 90];
 	
 	for (let month = 8; month < 12; month++) {
 		for (let day = 1; day <= 31; day++) {
@@ -38,7 +45,6 @@ function uploadFile() {
 			}
 		}
 	}
-	console.log(tableData);
 	
 	for (let i = 0; i < 2; i++) {
 		IS2201[i] = Math.ceil(IS2201[i] / 6);
@@ -48,8 +54,35 @@ function uploadFile() {
 	}
 	console.log (IS2201, IS2202, IS2101, IS2102);
 	
+	// Рандомим учебную практику
+	const tempMemory = [];
+	for (let i = 0; i < IS2202[0]; i++) {
+		tempMemory.push('УП');
+	}
+	for (let i = IS2202[0]; i < tableData[0].length - IS2202[1] - 2; i++) {
+		tempMemory.push('-');
+	}
+	let tempMemorySize = tempMemory.length;
+	for (let i = 0; i < tempMemorySize; i++) {
+		let j = getRandomInt(0, tempMemory.length);
+		tableData[3].push(tempMemory[j]);
+		tempMemory.splice(j, 1);
+	}
+	for (i = tableData[0].length - IS2202[1] - 1; i < tableData[0].length; i++) {
+		tableData[3].push('-');
+	}
 	
+	//Рандомим производственную практику
+	let startPPPosition = getRandomInt(tableData[3].lastIndexOf('УП') + 1, tableData[0].length - IS2202[1] - 1);
+	for (i = 0; i < IS2202[1]; i++) {
+		tableData[3].splice(startPPPosition + i, 1, 'ПП');
+		console.log(tableData[3]);
+	}
+	console.log(tableData[3].length);
+	console.log(tableData[3].lastIndexOf('УП'));
+	console.log(startPPPosition);
 	
+	// Создаём таблицу с результатом
 	while (document.querySelector("tr")) {
 		try {
 			tblHead.removeChild(document.querySelector("tr"));
