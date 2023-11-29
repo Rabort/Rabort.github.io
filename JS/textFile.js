@@ -64,7 +64,7 @@ function uploadFile() {
 	}
 	let tempMemorySize = tempMemory.length;
 	for (let i = 0; i < tempMemorySize; i++) {
-		let j = getRandomInt(0, tempMemory.length);
+		let j = getRandomInt(0, tempMemory.length - 1);
 		tableData[3].push(tempMemory[j]);
 		tempMemory.splice(j, 1);
 	}
