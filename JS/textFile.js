@@ -20,6 +20,32 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
+function generatePracticList(groupHours, rowNumber, tableData) {
+	// Рандомим учебную практику
+	const tempMemory = [];
+	for (let i = 0; i < groupHours[0]; i++) {
+		tempMemory.push('УП');
+	}
+	for (let i = groupHours[0]; i < tableData[0].length - groupHours[1] - 2; i++) {
+		tempMemory.push('-');
+	}
+	let tempMemorySize = tempMemory.length;
+	for (let i = 0; i < tempMemorySize; i++) {
+		let j = getRandomInt(0, tempMemory.length - 1);
+		tableData[rowNumber].push(tempMemory[j]);
+		tempMemory.splice(j, 1);
+	}
+	for (i = tableData[0].length - groupHours[1] - 1; i < tableData[0].length; i++) {
+		tableData[rowNumber].push('-');
+	}
+	
+	//Рандомим производственную практику
+	let startPPPosition = getRandomInt(tableData[rowNumber].lastIndexOf('УП') + 1, tableData[0].length - groupHours[1] - 1);
+	for (i = 0; i < groupHours[1]; i++) {
+		tableData[rowNumber].splice(startPPPosition + i, 1, 'ПП');
+	}
+}
+
 function uploadFile() {
 	
 	const tableData = [['⠀⠀⠀⠀⠀⠀⠀⠀'], ['⠀⠀⠀⠀⠀⠀⠀⠀'], ['ИС 22-01'], ['ИС 22-02'], ['ИС 21-01'], ['ИС 21-02']];
@@ -54,33 +80,10 @@ function uploadFile() {
 	}
 	console.log (IS2201, IS2202, IS2101, IS2102);
 	
-	// Рандомим учебную практику
-	const tempMemory = [];
-	for (let i = 0; i < IS2202[0]; i++) {
-		tempMemory.push('УП');
-	}
-	for (let i = IS2202[0]; i < tableData[0].length - IS2202[1] - 2; i++) {
-		tempMemory.push('-');
-	}
-	let tempMemorySize = tempMemory.length;
-	for (let i = 0; i < tempMemorySize; i++) {
-		let j = getRandomInt(0, tempMemory.length - 1);
-		tableData[3].push(tempMemory[j]);
-		tempMemory.splice(j, 1);
-	}
-	for (i = tableData[0].length - IS2202[1] - 1; i < tableData[0].length; i++) {
-		tableData[3].push('-');
-	}
-	
-	//Рандомим производственную практику
-	let startPPPosition = getRandomInt(tableData[3].lastIndexOf('УП') + 1, tableData[0].length - IS2202[1] - 1);
-	for (i = 0; i < IS2202[1]; i++) {
-		tableData[3].splice(startPPPosition + i, 1, 'ПП');
-		console.log(tableData[3]);
-	}
-	console.log(tableData[3].length);
-	console.log(tableData[3].lastIndexOf('УП'));
-	console.log(startPPPosition);
+	generatePracticList(IS2201, 2, tableData);
+	generatePracticList(IS2202, 3, tableData);
+	generatePracticList(IS2101, 4, tableData);
+	generatePracticList(IS2102, 5, tableData);
 	
 	// Создаём таблицу с результатом
 	while (document.querySelector("tr")) {
