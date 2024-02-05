@@ -14,13 +14,14 @@
 	padding: 10px 20px;
 	text-align: center;
 	position: relative;
-	left: 70px;
+	
 	text-decoration: none;
 	display: inline-block;
-	border-radius: 12px;
+	border-radius: 2px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
+	width: 300px;
 	}
 
 .input-file input[type=file] {
@@ -51,12 +52,12 @@
 	box-sizing: border-box;
 	text-decoration: none;
 	display: inline-block;
-	border-radius: 12px;
+	border-radius: 2px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
 	position: relative;
-	left: 17%;
+	width: 300px;
   }
   
   /*При наведении мышкой на конпку переходит в этот цвет | Cat Customer*/

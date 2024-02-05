@@ -5,7 +5,6 @@
 
 .input-file-btn-kotik {
 	position: relative;
-	left: 65px;
     display: inline-block;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -17,10 +16,11 @@
 	text-align: center;
 	box-sizing: border-box;
 	text-decoration: none;
-	border-radius: 12px;
+	border-radius: 2px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
+	width: 300px;
 }
 
 /*Меняет цвет на друго при наведении курсором на кнопку | Cat Customer*/
@@ -33,7 +33,7 @@
 .button1
 {
 	position: relative;
-    left: 35px;
+    
 	background-color: rgb(199, 98, 98);
 	display: inline-block;
 	-webkit-transition-duration: 0.4s;
@@ -45,10 +45,11 @@
 	text-align: center;
 	box-sizing: border-box;
 	text-decoration: none;
-	border-radius: 12px;
+	border-radius: 2px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
+	width: 300px;
 	
 }
 
@@ -62,7 +63,7 @@ border-radius: 18px;
 /*Кастомка для кнопки Гришиной | Cat Customer*/
 .Pink {
 	position: relative;
-	left: 3%;
+	
     display: inline-block;
 	background-color: #960070;
 	-webkit-transition-duration: 0.4s;
@@ -75,10 +76,11 @@ border-radius: 18px;
 	box-sizing: border-box;
 	text-decoration: none;
 	display: inline-block;
-	border-radius: 12px;
+	border-radius: 2px;
 	font-size: 14px;
 	margin: 0;
 	height: 40px;
+	width: 300px;
   }
   
   /*Меняет цвет при наведении курсором на кнопку(для Гришиной) | Cat Customer*/

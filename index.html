@@ -12,18 +12,22 @@
 		<link rel="stylesheet" href="CSS/swalka.css">
 		<link rel="stylesheet" href="CSS/knopkakoti.css">
 		<link rel="stylesheet" href="CSS/knopkazagrz.css">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/right-nav-style.css">
 		<!--Тут будут храниться нужные мне модули | lolmak-->
 			<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 			<script src="https://unpkg.com/axios@1.5.1/dist/axios.min.js"></script>
 		<!--Тут будут храниться нужные мне модули | lolmak-->
 	</head>
-	<body>               <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->
-		
+	<body>               <!--тег< label> является надписью для какого-либо поля, созданного при помощи тегов: input | Cat Customer-->	
 		<div class="sidenav">
-		<label class="input-file">
+		 <label class="input-file">
 		  <input type="file" id="textFile">
 		  <br><br><br><span class="input-file-btn" >Выберите файл</span> <!--Тег <span> — строчный элемент, используемый для группировки и применения стилей к небольшому фрагменту текста или части большого текста, не передавая при этом никакого смыслового значения сам по себе-->      
-		</label>
+		 </label>
 		 <br><br><button class="Green" onclick="uploadFile()">Подтвердить загрузку</button> 
 		 <p><i><strong class="FileNameCSS" id="fileName"></strong></i>
 		 <strong class="Info" id="result"></strong>
@@ -47,7 +51,10 @@
 		<!--Кнопка Для Гришиной!!! (для загрузки котеков) | Cat Customer-->
 		<label class="input-file-kotik",>
 		  <input type="file" accept="image/png, image/gif, image/jpeg" id="catFile"> <!--Сразу сделал так, что б он показывал при загрузке картники формата пнг жпг жепег | Cat Customer-->
-		  <br><br><br><br><span class="input-file-btn-kotik">Выберите котека</span>
+		  <br><br><br>
+		  <div style="border-bottom: solid 10px #f1f1f1;"></div>
+		  <br>
+		  <span class="input-file-btn-kotik">Выберите котека</span>
 		  <br><br><button class="button1" onclick="catUploadHTTP()">Отправь котека на сервер</button><!--Сюда свой скрипте ставь. Позже я все кастомизирую.-->
 		</label>
 		 <script src="JS/catFile.js"></script>
@@ -64,8 +71,27 @@
 	 <script src="JS/textFile.js"></script>
 	</div>
 	<!--Таблица | lolmak-->
+	
+	<input type="checkbox" id="nav-toggle" hidden>
 
-       
+    <nav class="nav">
+  
+        <label for="nav-toggle" class="nav-toggle" onclick></label>
+    
+        <h2 class="logo"> 
+            <a>Меню</a> 
+        </h2>
+        <ul>
 		
+			<li><a href="Koll.html">О Колледже</a>
+				<li><a href="Teacher.html"> Учителя </a>
+				<li><a href="index.html">Расписания</a>
+				<li><a href="#4">Скажите что писать сюда</a>
+				<li><a href="#5">И сюда</a>
+				<li><a href="#6">И вот сюда</a>
+				<li><a href="#7">И здесь тоже</a> 
+		
+        </ul>
+    </nav>
 </body>	
 </html>
