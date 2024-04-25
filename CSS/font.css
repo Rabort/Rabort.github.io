@@ -66,6 +66,46 @@ PreFileInfoCSS {
 	width: 0;
 	height: 0;
 }
+.Raspis {
+	background-color: #ffb100ff;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	border-radius: 4px;
+	font-size: 14px;
+	margin-top: 20px;
+	height: 40px;
+	width: 300px;
+	margin-left: 30px;
+	font-weight: bold;
+}
+
+.Raspis:Hover{
+	background-color:  rgb(173, 121, 0);
+	color: white;
+}
+.Raspis1 {
+	background-color: #ffb100ff;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+	border: none;
+	color: rgb(255, 255, 255);
+	padding: 10px 20px;
+	text-align: center;
+	box-sizing: border-box;
+	border-radius: 4px;
+	font-size: 14px;
+	margin-top: 20px;
+	height: 40px;
+	width: 240px;
+	margin-left: 30px;
+	font-weight: bold;
+}
+
+
 /*Кастомка выводимой таблицы | Cat Customer*/
 
 /****************************
