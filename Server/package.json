@@ -1,0 +1,20 @@
+{
+  "name": "node-site",
+  "version": "1.0.0",
+  "description": "Для колледжа",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "lolmak",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "circular-json": "^0.5.9",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.1",
+    "fs-extra": "^11.1.1",
+    "multer": "^1.4.5-lts.1",
+    "node-fetch": "^2.6.7"
+  }
+}
